@@ -1,76 +1,88 @@
-/* ============================
-   SandboxMusicals Awesome Table Styling
-   ============================ */
+/* =========================================================
+   SandboxMusicals — Awesome Table CSS (v4)
+   ========================================================= */
 
-/* Font & background */
-.awesome-table-container {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #fff8f2;
+/* —— Global font (force Garamond) —— */
+.awesome-table-container,
+.awesome-table,
+.awesome-table * ,
+.awesome-table table,
+.awesome-table table th,
+.awesome-table table td {
+  font-family: Garamond, "Times New Roman", serif !important;
 }
 
-/* Table header style */
-.awesome-table-header {
-  background-color: #ffecd9;
-  color: #333;
-  font-weight: bold;
-  font-size: 14px;
+/* —— Table header look —— */
+.awesome-table table thead th {
+  background: #ffecd9 !important; /* soft peach */
+  color: #333 !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  border-bottom: 1px solid #e6d5c7 !important;
 }
 
-/* Table cells */
-.awesome-table td, .awesome-table th {
-  padding: 8px 12px;
-  border-bottom: 1px solid #ddd;
+/* —— Row padding + subtle dividers —— */
+.awesome-table table td,
+.awesome-table table th {
+  padding: 8px 12px !important;
+  border-bottom: 1px solid #eee !important;
 }
 
-/* Links */
-a {
-  color: #d35400;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+/* —— Optional: zebra striping for readability —— */
+.awesome-table table tbody tr:nth-child(odd) td {
+  background: #fffdfb !important;
 }
 
-/* Map height fix */
-.gmap-container {
+/* —— Links —— */
+.awesome-table a {
+  color: #d35400 !important;      /* brandy orange */
+  text-decoration: none !important;
+}
+.awesome-table a:hover {
+  text-decoration: underline !important;
+}
+
+/* —— Instagram links: add a camera icon —— */
+.awesome-table a[href*="instagram.com"]::before {
+  content: "📸 " !important;
+}
+
+/* —— Map height (tweak as needed) —— */
+.gmap-container,
+.awesome-table .gmap-container {
   height: 600px !important;
 }
 
-/* ============================
-   Hide Columns (keep map pins working)
-   Adjust nth-child numbers if needed
-   ============================ */
-
-/* Example: If Latitude = col 1, Longitude = col 2 in your sheet */
-.awesome-table td:nth-child(1),
-.awesome-table th:nth-child(1),
-.awesome-table td:nth-child(2),
-.awesome-table th:nth-child(2) {
-  display: none;
-}
-
-/* ============================
-   Instagram Icon Styling
-   ============================ */
-a[href*="instagram.com"]::before {
-  content: "📸 ";
-}
-/* TEMP: prove CSS loads */
-.awesome-table-header { background:#ff66aa !important; }
-/* ===== Hide Latitude & Longitude Columns ===== */
-/* Adjust nth-child numbers if your Lat/Lng aren't literally the first two visible columns */
-table thead tr th:nth-child(1),
-table tbody tr td:nth-child(1),
-table thead tr th:nth-child(2),
-table tbody tr td:nth-child(2) {
+/* =========================================================
+   Hide columns in the TABLE (not in the data)
+   Adjust nth-child indexes if Lat/Lng aren’t 1 & 2 in your view
+   ========================================================= */
+.awesome-table table thead tr th:nth-child(1),
+.awesome-table table tbody tr td:nth-child(1),
+.awesome-table table thead tr th:nth-child(2),
+.awesome-table table tbody tr td:nth-child(2) {
   display: none !important;
 }
 
-/* ===== Set Table Font to Garamond ===== */
-.awesome-table-container,
-table,
-table th,
-table td {
-  font-family: Garamond, 'Times New Roman', serif !important;
+/* =========================================================
+   Optional: hide other internal columns (uncomment & adjust)
+   Example below hides columns 10–12 (place id / geocode metadata)
+   ========================================================= */
+/*
+.awesome-table table thead tr th:nth-child(10),
+.awesome-table table tbody tr td:nth-child(10),
+.awesome-table table thead tr th:nth-child(11),
+.awesome-table table tbody tr td:nth-child(11),
+.awesome-table table thead tr th:nth-child(12),
+.awesome-table table tbody tr td:nth-child(12) {
+  display: none !important;
 }
+*/
 
+/* =========================================================
+   DEBUG (temporary): prove CSS is loading
+   Uncomment briefly; you should see a magenta outline.
+   ========================================================= */
+/*
+.awesome-table { outline: 3px solid magenta !important; }
+*/
