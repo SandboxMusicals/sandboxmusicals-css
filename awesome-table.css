@@ -1,88 +1,52 @@
-/* =========================================================
-   SandboxMusicals — Awesome Table CSS (v4)
-   ========================================================= */
+/* ===== SandboxMusicals Awesome Table Styling ===== */
 
-/* —— Global font (force Garamond) —— */
+/* Global font */
 .awesome-table-container,
 .awesome-table,
-.awesome-table * ,
+.awesome-table *,
 .awesome-table table,
 .awesome-table table th,
 .awesome-table table td {
   font-family: Garamond, "Times New Roman", serif !important;
 }
 
-/* —— Table header look —— */
+/* Header */
 .awesome-table table thead th {
-  background: #ffecd9 !important; /* soft peach */
+  background: #ffecd9 !important;
   color: #333 !important;
   font-weight: 700 !important;
   font-size: 14px !important;
   border-bottom: 1px solid #e6d5c7 !important;
 }
 
-/* —— Row padding + subtle dividers —— */
+/* Row padding */
 .awesome-table table td,
 .awesome-table table th {
   padding: 8px 12px !important;
   border-bottom: 1px solid #eee !important;
 }
 
-/* —— Optional: zebra striping for readability —— */
+/* Zebra striping */
 .awesome-table table tbody tr:nth-child(odd) td {
   background: #fffdfb !important;
 }
 
-/* —— Links —— */
+/* Links */
 .awesome-table a {
-  color: #d35400 !important;      /* brandy orange */
+  color: #d35400 !important;
   text-decoration: none !important;
 }
 .awesome-table a:hover {
   text-decoration: underline !important;
 }
 
-/* —— Instagram links: add a camera icon —— */
+/* Instagram icon */
 .awesome-table a[href*="instagram.com"]::before {
   content: "📸 " !important;
 }
 
-/* —— Map height (tweak as needed) —— */
+/* Map height */
 .gmap-container,
 .awesome-table .gmap-container {
   height: 600px !important;
 }
-
-/* =========================================================
-   Hide columns in the TABLE (not in the data)
-   Adjust nth-child indexes if Lat/Lng aren’t 1 & 2 in your view
-   ========================================================= */
-.awesome-table table thead tr th:nth-child(1),
-.awesome-table table tbody tr td:nth-child(1),
-.awesome-table table thead tr th:nth-child(2),
-.awesome-table table tbody tr td:nth-child(2) {
-  display: none !important;
-}
-
-/* =========================================================
-   Optional: hide other internal columns (uncomment & adjust)
-   Example below hides columns 10–12 (place id / geocode metadata)
-   ========================================================= */
-/*
-.awesome-table table thead tr th:nth-child(10),
-.awesome-table table tbody tr td:nth-child(10),
-.awesome-table table thead tr th:nth-child(11),
-.awesome-table table tbody tr td:nth-child(11),
-.awesome-table table thead tr th:nth-child(12),
-.awesome-table table tbody tr td:nth-child(12) {
-  display: none !important;
-}
-*/
-
-/* =========================================================
-   DEBUG (temporary): prove CSS is loading
-   Uncomment briefly; you should see a magenta outline.
-   ========================================================= */
-/*
-.awesome-table { outline: 3px solid magenta !important; }
-*/
