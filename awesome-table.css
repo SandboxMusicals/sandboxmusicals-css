@@ -1,7 +1,57 @@
-/* Hide Latitude and Longitude columns in the table view */
+/* ============================
+   SandboxMusicals Awesome Table Styling
+   ============================ */
+
+/* Font & background */
+.awesome-table-container {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff8f2;
+}
+
+/* Table header style */
+.awesome-table-header {
+  background-color: #ffecd9;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Table cells */
+.awesome-table td, .awesome-table th {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Links */
+a {
+  color: #d35400;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Map height fix */
+.gmap-container {
+  height: 600px !important;
+}
+
+/* ============================
+   Hide Columns (keep map pins working)
+   Adjust nth-child numbers if needed
+   ============================ */
+
+/* Example: If Latitude = col 1, Longitude = col 2 in your sheet */
 .awesome-table td:nth-child(1),
 .awesome-table th:nth-child(1),
 .awesome-table td:nth-child(2),
 .awesome-table th:nth-child(2) {
   display: none;
+}
+
+/* ============================
+   Instagram Icon Styling
+   ============================ */
+a[href*="instagram.com"]::before {
+  content: "📸 ";
 }
