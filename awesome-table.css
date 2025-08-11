@@ -57,3 +57,20 @@ a[href*="instagram.com"]::before {
 }
 /* TEMP: prove CSS loads */
 .awesome-table-header { background:#ff66aa !important; }
+/* ===== Hide Latitude & Longitude Columns ===== */
+/* Adjust nth-child numbers if your Lat/Lng aren't literally the first two visible columns */
+table thead tr th:nth-child(1),
+table tbody tr td:nth-child(1),
+table thead tr th:nth-child(2),
+table tbody tr td:nth-child(2) {
+  display: none !important;
+}
+
+/* ===== Set Table Font to Garamond ===== */
+.awesome-table-container,
+table,
+table th,
+table td {
+  font-family: Garamond, 'Times New Roman', serif !important;
+}
+
