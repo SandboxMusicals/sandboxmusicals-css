@@ -1,0 +1,7 @@
+/* Hide Latitude and Longitude columns in the table view */
+.awesome-table td:nth-child(1),
+.awesome-table th:nth-child(1),
+.awesome-table td:nth-child(2),
+.awesome-table th:nth-child(2) {
+  display: none;
+}
